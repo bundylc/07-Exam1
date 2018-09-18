@@ -2,8 +2,8 @@
 Exam 1, problem 2.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Landon Bundy.
+"""  # TODONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import testing_helper
 import time
@@ -12,15 +12,15 @@ import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    problem2a_testing()
+    #problem2a_testing()
     run_test_problem2b()
-    run_test_problem2c()
+    #run_test_problem2c()
 
 
 def problem2a_testing():
     """ Tests the   sum_of_digits_of_sum_of_factors   function. """
     ############################################################################
-    #  TODO: 2. Implement this TEST function.  See the IMPORTANT NOTE below.
+    #  TODONE: 2. Implement this TEST function.  See the IMPORTANT NOTE below.
     #     This problem TESTS the    sum_of_digits_of_sum_of_factors    function
     #     that is defined below.  Include at least **   4   ** tests.
     #     Use the usual format:
@@ -31,9 +31,9 @@ def problem2a_testing():
     #       print('Expected:', expected)
     #       print('Actual:  ', actual)
     #
-    #  TODO (continued): IMPORTANT NOTE:
-    #  TODO (continued):   The function that you are TESTING is PURPOSELY
-    #  TODO (continued)    NOT implemented.  Do NOT implement it.  That is,
+    #  TODOne (continued): IMPORTANT NOTE:
+    #  TODOne (continued):   The function that you are TESTING is PURPOSELY
+    #  TODOne (continued)    NOT implemented.  Do NOT implement it.  That is,
     #                   do NOT implement the
     #                           sum_of_digits_of_sum_of_factors
     #                   function!  Just write these TESTS of that function
@@ -44,6 +44,30 @@ def problem2a_testing():
     print('---------------------------------------------------------')
     print('Testing the   sum_of_digits_of_sum_of_factors   function:')
     print('---------------------------------------------------------')
+
+    # Test 1:
+    expected = 11
+    actual = sum_of_digits_of_sum_of_factors(28)
+    print('Test 1 Expected:', expected)
+    print('         actual', actual)
+
+    # Test 2:
+    expected = 6
+    actual = sum_of_digits_of_sum_of_factors(5)
+    print('Test 1 Expected:', expected)
+    print('         actual', actual)
+
+    # Test 3:
+    expected = 9
+    actual = sum_of_digits_of_sum_of_factors(10)
+    print('Test 1 Expected:', expected)
+    print('         actual', actual)
+
+    # Test 4:
+    expected = 5
+    actual = sum_of_digits_of_sum_of_factors(13)
+    print('Test 1 Expected:', expected)
+    print('         actual', actual)
 
 
 def sum_of_digits_of_sum_of_factors(n):
@@ -63,19 +87,19 @@ def sum_of_digits_of_sum_of_factors(n):
        *** ASK FOR AN EXPLANATION IF YOU DO NOT UNDERSTAND THE ABOVE. ***
     """
     ############################################################################
-    #  TODO (continued):  This function is PURPOSELY ** not implemented. **
-    #  TODO (continued):  DO NOT IMPLEMENT  sum_of_digits_of_sum_of_factors.
+    #  TODOne (continued):  This function is PURPOSELY ** not implemented. **
+    #  TODOne (continued):  DO NOT IMPLEMENT  sum_of_digits_of_sum_of_factors.
     #                     Just leave it as it is (with no code).
     ############################################################################
 
 
 ################################################################################
-# TODO: 3.  READ the green doc-string for the   number_of_factors   function
+# TODOne: 3.  READ the green doc-string for the   number_of_factors   function
 #    defined below.  You do NOT need to understand its implementation,
 #    just its specification (per the doc-string).
 #    You should  ** CALL **  that function as needed in implementing
 #    the other functions.
-# TODO (continued):  After you have READ this _TODO_, change its _TODO_ to DONE.
+# TODOne (continued):  After you have READ this _TODO_, change its _TODO_ to DONE.
 ################################################################################
 
 def number_of_factors(n):
@@ -102,8 +126,8 @@ def number_of_factors(n):
 
     return count
     ############################################################################
-    #  TODO (continued):  Students: Do NOT touch the above   number_of_factors
-    #  TODO (continued)   function; CALL it as appropriate in problem(s) below.
+    #  TODOne (continued):  Students: Do NOT touch the above   number_of_factors
+    #  TODOne (continued)   function; CALL it as appropriate in problem(s) below.
     ############################################################################
 
 
@@ -167,7 +191,7 @@ def run_test_problem2b():
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 8:
-    expected = 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25
+    expected = 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25
     # which is 247
     print_expected_result_of_test([13, 25, 2], expected, test_results,
                                   format_string)
@@ -175,7 +199,7 @@ def run_test_problem2b():
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 9:
-    expected = 13 + 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25
+    expected = 14 + 15 + 16 + 17 + 18 + 19 + 20 + 21 + 22 + 23 + 24 + 25
     # which is 247
     print_expected_result_of_test([13, 25, 1], expected, test_results,
                                   format_string)
@@ -183,7 +207,7 @@ def run_test_problem2b():
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 10:
-    expected = 1 + 2  # which is 3
+    expected = 2  # which is 3
     print_expected_result_of_test([1, 2, 1], expected, test_results,
                                   format_string)
     actual = problem2b(1, 2, 1)
@@ -218,14 +242,14 @@ def run_test_problem2b():
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 15:
-    expected = 49350803
+    expected = 49349803
     print_expected_result_of_test([1000, 20000, 13], expected, test_results,
                                   format_string)
     actual = problem2b(1000, 20000, 13)
     print_actual_result_of_test(expected, actual, test_results)
 
     # Test 16:
-    expected = 49346707
+    expected = 49345707
     print_expected_result_of_test([1000, 20000, 14], expected, test_results,
                                   format_string)
     actual = problem2b(1000, 20000, 14)
@@ -282,8 +306,6 @@ def run_test_problem2b():
 
     print_summary_of_test_results(test_results)
 
-
-def problem2b(a, b, x):
     """
     What comes in:  Positive integers a, b and x, with a <= b.
     What goes out:
@@ -318,6 +340,17 @@ def problem2b(a, b, x):
     # TODO (continued):       (i.e., call) the   number_of_factors   function
     #                         that is DEFINED ABOVE.
     ############################################################################
+
+
+def problem2b(a, b, x):
+    count = 0
+    for k in range(b-a):
+        if number_of_factors(a+k+1) >= x:
+            count = count + a+k+1
+    return count
+
+
+
 
 
 def run_test_problem2c():

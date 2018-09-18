@@ -2,15 +2,15 @@
 Exam 1, problem 1.
 
 Authors: David Mutchler, Vibha Alangar, Valerie Galluzzi, Mark Hays,
-         Amanda Stouder, their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Amanda Stouder, their colleagues and Landon Bundy.
+"""  # TODONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_problem1a()
+    #run_test_problem1a()
     run_test_problem1b()
 
 
@@ -56,8 +56,6 @@ def run_test_problem1a():
     problem1a(rectangle, square, 15, window)
     window.close_on_mouse_click()
 
-
-def problem1a(rectangle, square, thickness, window):
     """
     See   problem1a_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -89,9 +87,23 @@ def problem1a(rectangle, square, thickness, window):
       :type window:    rg.RoseWindow
     """
     # --------------------------------------------------------------------------
-    # TODO: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
+    # TODONE: 2. Implement and test this function.  SEE THE PICTURES in the PDF!
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
+
+
+def problem1a(rectangle, square, thickness, window):
+    rectangle.attach_to(window)
+    square.attach_to(window)
+    right = rectangle.get_upper_right_corner()
+    left = rectangle.get_upper_left_corner()
+    start = rg.Point(square.center.x, square.center.y)
+    end = rg.Point(((left.x + right.x)/2), right.y)
+    line = rg.Line(start, end)
+    line.thickness = thickness
+    line.color = rectangle.outline_color
+    line.attach_to(window)
+    window.render()
 
 
 def run_test_problem1b():
@@ -121,8 +133,6 @@ def run_test_problem1b():
     problem1b(p, window, 150, 150, 'purple')
     window.close_on_mouse_click()
 
-
-def problem1b(point, win, width, height, color):
     """
     See   problem1b_picture.pdf   in this project for pictures
     that may help you better understand the following specification:
@@ -153,6 +163,13 @@ def problem1b(point, win, width, height, color):
     #          Tests have been written for you (above).
     # --------------------------------------------------------------------------
 
+
+def problem1b(point, win, width, height, color):
+    point2 = rg.Point(point.x - width, point.y + height)
+    ellipse = rg.Ellipse(point, point2)
+    ellipse.fill_color = color
+    ellipse.attach_to(win)
+    win.render()
 
 # ------------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
